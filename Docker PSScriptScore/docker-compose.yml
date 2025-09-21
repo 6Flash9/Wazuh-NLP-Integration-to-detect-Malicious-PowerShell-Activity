@@ -1,0 +1,18 @@
+version: '3'
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./api.py:/app/api.py
+      - ./model.joblib:/app/model.joblib
+      - ./vectorizer.joblib:/app/vectorizer.joblib
+    ports:
+      - "5000:5000"
+    networks:
+      - my-shared-network
+
+networks:
+  my-shared-network:
+    external: true
