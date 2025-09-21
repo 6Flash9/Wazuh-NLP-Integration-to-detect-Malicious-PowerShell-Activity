@@ -1,0 +1,1 @@
+# Wazuh-NLP-Integration-to-detect-Malicious-PowerShell-Activity
